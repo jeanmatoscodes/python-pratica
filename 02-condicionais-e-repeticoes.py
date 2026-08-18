@@ -63,3 +63,67 @@ for dia in range(1, 4):
     total = total + venda
 
 print(f"Total vendido: R$ {total:.2f}")
+
+# Controle de vendas
+# Uso de repetição, condicionais, acumulador e contador
+
+total = 0
+atingiram_meta = 0
+
+for numero in range(1, 6):
+    nome = input(f"Digite o nome do vendedor {numero}: ")
+    valor_vendido = float(input("Digite o valor vendido: "))
+
+    total = total + valor_vendido
+
+    if valor_vendido < 1000:
+        print("Abaixo da meta")
+
+    elif valor_vendido <= 3000:
+        atingiram_meta = atingiram_meta + 1
+        print("Meta atingida")
+
+    else:
+        atingiram_meta = atingiram_meta + 1
+        print("Meta superada")
+
+print(f"Valor vendido pela equipe: R$ {total:.2f}")
+print(f"Vendedores que atingiram a meta: {atingiram_meta}")
+
+
+# Controle de desempenho de funcionários
+# Uso de repetição, condicionais e dois contadores
+
+funcionario_desempenho = 0
+funcionario_atencao = 0
+
+for numero in range(1, 7):
+    nome = input(f"Digite o nome do funcionário {numero}: ")
+    faltas = int(input("Digite a quantidade de faltas mensal: "))
+
+    if faltas == 0:
+        funcionario_desempenho = funcionario_desempenho + 1
+        print("Excelente")
+
+    elif faltas <= 2:
+        print("Regular")
+
+    else:
+        funcionario_atencao = funcionario_atencao + 1
+        print("Atenção")
+
+print(f"Funcionários com desempenho excelente: {funcionario_desempenho}")
+print(f"Funcionários em atenção: {funcionario_atencao}")
+
+
+# Controle de acesso
+# Uso de condição AND e tratamento de texto
+
+setor = input("Digite seu setor: ").strip().upper()
+idade = int(input("Digite sua idade: "))
+
+if setor == "TI" and idade >= 18:
+    print("Acesso autorizado")
+
+else:
+    print("Acesso negado")
